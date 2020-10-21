@@ -11,11 +11,431 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"></FrameLayout>
+        android:layout_weight="1">
 
-    <FrameLayout
+        <TextView
+            android:id="@+id/tv_dysplay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="84sp"
+            android:text="12345678"/>
+    </FrameLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="4"></FrameLayout>
+        android:orientation="vertical"
+        android:layout_weight="4">
+
+        // 1 line buttons
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/buttonsPadding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textSizeUpperButtons"
+                    android:text="__"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/bt_mrc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/buttonsPadding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textSizeUpperButtons"
+                    android:text="MR"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/bt_m_minus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/buttonsPadding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textSizeUpperButtons"
+                    android:text="M-"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/bt_m_plus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/buttonsPadding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textSizeUpperButtons"
+                    android:text="M+"/>
+
+            </FrameLayout>
+        </LinearLayout>
+
+        // 2 line buttons
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/bt_ac"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/buttonsPadding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textSizeUpperButtons"
+                    android:text="AC"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/bt_c"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1
+"
+                android:padding="@dimen/buttonsPadding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textSizeUpperButtons"
+                    android:text="C"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/bt_sqr"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/buttonsPadding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textSizeUpperButtons"
+                    android:text="SQR"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/bt_procent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/buttonsPadding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textSizeUpperButtons"
+                    android:text="%"/>
+
+            </FrameLayout>
+        </LinearLayout>
+
+        // 3 line buttons
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/bt_7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/buttonsPadding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textSizeUpperButtons"
+                    android:text="7"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/bt_8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/buttonsPadding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textSizeUpperButtons"
+                    android:text="8"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/bt_9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/buttonsPadding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textSizeUpperButtons"
+                    android:text="9"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/bt_dev"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/buttonsPadding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textSizeUpperButtons"
+                    android:text="/"/>
+
+            </FrameLayout>
+        </LinearLayout>
+
+        // 4 line buttons
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/bt_4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/buttonsPadding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textSizeUpperButtons"
+                    android:text="4"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/bt_5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/buttonsPadding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textSizeUpperButtons"
+                    android:text="5"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/bt_6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/buttonsPadding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textSizeUpperButtons"
+                    android:text="6"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/bt_mult"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/buttonsPadding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textSizeUpperButtons"
+                    android:text="*"/>
+
+            </FrameLayout>
+        </LinearLayout>
+
+        // 5 line buttons
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/bt_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/buttonsPadding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textSizeUpperButtons"
+                    android:text="1"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/bt_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/buttonsPadding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textSizeUpperButtons"
+                    android:text="2"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/bt_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/buttonsPadding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textSizeUpperButtons"
+                    android:text="3"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/bt_minus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/buttonsPadding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textSizeUpperButtons"
+                    android:text="-"/>
+
+            </FrameLayout>
+        </LinearLayout>
+
+        // 6 line buttons
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/bt_0"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/buttonsPadding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textSizeUpperButtons"
+                    android:text="0"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/bt_dot"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/buttonsPadding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textSizeUpperButtons"
+                    android:text="."/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/bt_equal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/buttonsPadding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textSizeUpperButtons"
+                    android:text="="/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/bt_plus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/buttonsPadding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textSizeUpperButtons"
+                    android:text="+"/>
+
+            </FrameLayout>
+        </LinearLayout>
+
+    </LinearLayout>
 
 </LinearLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="buttonsPadding">10dp</dimen>
+    <dimen name="textSizeUpperButtons">50sp</dimen>
+</resources>
