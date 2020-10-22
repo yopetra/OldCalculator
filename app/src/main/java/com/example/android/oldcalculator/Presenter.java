@@ -120,7 +120,7 @@ public class Presenter {
                 mDisplayValue = "0";
                 mTotalResult = 0;
                 mIsInteger = true;
-//                mLastoperator = "";
+                mLastoperator = "";
                 break;
         }
 
@@ -157,6 +157,13 @@ public class Presenter {
 
     public String divideOperation() {
         performMathematic("/");
+
+        String result = Double.toString(mTotalResult);
+        return result;
+    }
+
+    public String equalOperation() {
+        performMathematic(mLastoperator);
 
         String result = Double.toString(mTotalResult);
         return result;

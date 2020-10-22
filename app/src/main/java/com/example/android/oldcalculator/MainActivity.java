@@ -136,6 +136,14 @@ public class MainActivity extends AppCompatActivity {
                 binding.tvDysplay.setText(result);
             }
         });
+
+        binding.btEqual.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String result = presenter.equalOperation();
+                binding.tvDysplay.setText(result);
+            }
+        });
     }
 
     private void numberActions(int nmAction){
