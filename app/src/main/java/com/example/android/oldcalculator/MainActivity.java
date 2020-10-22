@@ -128,6 +128,14 @@ public class MainActivity extends AppCompatActivity {
                 binding.tvDysplay.setText(result);
             }
         });
+
+        binding.btDev.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String result = presenter.divideOperation();
+                binding.tvDysplay.setText(result);
+            }
+        });
     }
 
     private void numberActions(int nmAction){
