@@ -24,8 +24,6 @@ public class MainActivity extends AppCompatActivity {
              @Override
              public void onClick(View view) {
                  numberActions(0);
-//                int result =  presenter.clickedNumberButton(0);
-//                binding.tvDysplay.setText(String.valueOf(result));
              }
          });
 
@@ -35,6 +33,62 @@ public class MainActivity extends AppCompatActivity {
                  numberActions(1);
              }
          });
+
+         binding.bt2.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View view) {
+                 numberActions(2);
+             }
+         });
+
+        binding.bt3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                numberActions(3);
+            }
+        });
+
+        binding.bt4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                numberActions(4);
+            }
+        });
+
+        binding.bt5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                numberActions(5);
+            }
+        });
+
+        binding.bt6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                numberActions(6);
+            }
+        });
+
+        binding.bt7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                numberActions(7);
+            }
+        });
+
+        binding.bt8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                numberActions(8);
+            }
+        });
+
+        binding.bt9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                numberActions(9);
+            }
+        });
     }
 
     private void numberActions(int nmAction){
