@@ -89,6 +89,14 @@ public class MainActivity extends AppCompatActivity {
                 numberActions(9);
             }
         });
+
+        binding.btAc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int result =  presenter.clickOpetationButton("ac");
+                binding.tvDysplay.setText(String.valueOf(result));
+            }
+        });
     }
 
     private void numberActions(int nmAction){

@@ -101,4 +101,14 @@ public class Presenter {
 
         return mDisplayValue;
     }
+
+    public int clickOpetationButton(String btnName) {
+
+        switch(btnName){
+            case "ac":
+                mDisplayValue = 0;
+        }
+
+        return mDisplayValue;
+    }
 }
