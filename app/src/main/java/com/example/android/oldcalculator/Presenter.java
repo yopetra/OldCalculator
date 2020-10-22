@@ -122,6 +122,15 @@ public class Presenter {
                 mIsInteger = true;
                 mLastoperator = "";
                 break;
+
+            case "sqr":
+                mTotalResult = Math.sqrt(Double.parseDouble(mDisplayValue));
+
+                mDisplayValue = Double.toString(mTotalResult);
+                mTotalResult = 0;
+                mIsInteger = true;
+                mLastoperator = "";
+                break;
         }
 
         return mDisplayValue;
