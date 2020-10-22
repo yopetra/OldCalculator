@@ -148,6 +148,13 @@ public class Presenter {
         return result;
     }
 
+    public String multiplyOperation() {
+        performMathematic("*");
+
+        String result = Double.toString(mTotalResult);
+        return result;
+    }
+
     private void performMathematic(String operator){
         if(mLastoperator.matches("")){
             mTotalResult = Double.parseDouble(mDisplayValue);
@@ -159,6 +166,9 @@ public class Presenter {
                 case "-":
                     mTotalResult = mTotalResult - Double.parseDouble(mDisplayValue);
                     break;
+                case "*":
+                    mTotalResult = mTotalResult * Double.parseDouble(mDisplayValue);
+                    break;
             }
         }
 
@@ -167,4 +177,6 @@ public class Presenter {
         mIsInteger = true;
         mClearScreen = true;
     }
+
+
 }
