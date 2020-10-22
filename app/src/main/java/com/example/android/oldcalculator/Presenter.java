@@ -20,6 +20,7 @@ public class Presenter {
             case 1:
                 if(mDisplayValue == 0){
                     mDisplayValue = 1;
+                    break;
                 }else{
                     mDisplayValue = mDisplayValue * 10 + 1;
                     break;
@@ -28,6 +29,7 @@ public class Presenter {
             case 2:
                 if(mDisplayValue == 0){
                     mDisplayValue = 2;
+                    break;
                 }else{
                     mDisplayValue = mDisplayValue * 10 + 2;
                     break;
@@ -36,6 +38,7 @@ public class Presenter {
             case 3:
                 if(mDisplayValue == 0){
                     mDisplayValue = 3;
+                    break;
                 }else{
                     mDisplayValue = mDisplayValue * 10 + 3;
                     break;
@@ -44,6 +47,7 @@ public class Presenter {
             case 4:
                 if(mDisplayValue == 0){
                     mDisplayValue = 4;
+                    break;
                 }else{
                     mDisplayValue = mDisplayValue * 10 + 4;
                     break;
@@ -52,6 +56,7 @@ public class Presenter {
             case 5:
                 if(mDisplayValue == 0){
                     mDisplayValue = 5;
+                    break;
                 }else{
                     mDisplayValue = mDisplayValue * 10 + 5;
                     break;
@@ -60,6 +65,7 @@ public class Presenter {
             case 6:
                 if(mDisplayValue == 0){
                     mDisplayValue = 6;
+                    break;
                 }else{
                     mDisplayValue = mDisplayValue * 10 + 6;
                     break;
@@ -68,6 +74,7 @@ public class Presenter {
             case 7:
                 if(mDisplayValue == 0){
                     mDisplayValue = 7;
+                    break;
                 }else{
                     mDisplayValue = mDisplayValue * 10 + 7;
                     break;
@@ -76,6 +83,7 @@ public class Presenter {
             case 8:
                 if(mDisplayValue == 0){
                     mDisplayValue = 8;
+                    break;
                 }else{
                     mDisplayValue = mDisplayValue * 10 + 8;
                     break;
@@ -84,6 +92,7 @@ public class Presenter {
             case 9:
                 if(mDisplayValue == 0){
                     mDisplayValue = 9;
+                    break;
                 }else{
                     mDisplayValue = mDisplayValue * 10 + 9;
                     break;
