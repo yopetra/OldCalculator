@@ -93,14 +93,37 @@ public class MainActivity extends AppCompatActivity {
         binding.btAc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int result =  presenter.clickOpetationButton("ac");
-                binding.tvDysplay.setText(String.valueOf(result));
+                String  result =  presenter.clickOpetationButton("ac");
+                binding.tvDysplay.setText(result);
+            }
+        });
+
+        binding.btDot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                presenter.setFractional();
+            }
+        });
+
+        binding.btPlus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String result = presenter.plusOperation();
+                binding.tvDysplay.setText(result);
+            }
+        });
+
+        binding.btMinus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String result = presenter.minusOperation();
+                binding.tvDysplay.setText(result);
             }
         });
     }
 
     private void numberActions(int nmAction){
-        int result =  presenter.clickedNumberButton(nmAction);
-        binding.tvDysplay.setText(String.valueOf(result));
+        String result =  presenter.clickedNumberButton(nmAction);
+        binding.tvDysplay.setText(result);
     }
 }

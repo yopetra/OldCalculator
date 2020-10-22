@@ -2,113 +2,169 @@ package com.example.android.oldcalculator;
 
 public class Presenter {
 
-    private int mDisplayValue = 0;
+    private String mDisplayValue = "0";
+    private double mTotalResult = 0;
+    private boolean mIsInteger = true;
+    private boolean mClearScreen = false;
+    private String mLastoperator = "";
+//    private int mFractionalCounter = 0;
 
     public Presenter(){}
 
-    public int clickedNumberButton(int btnName){
+    public String clickedNumberButton(int btnName){
+
+        if(mClearScreen){
+            mDisplayValue = "0";
+        }
 
         switch(btnName){
             case 0:
-                if(mDisplayValue == 0){
+                if(mDisplayValue == "0"){
                     break;
                 }else{
-                    mDisplayValue = mDisplayValue * 10;
+                    mDisplayValue = mDisplayValue + "0";
                     break;
                 }
 
             case 1:
-                if(mDisplayValue == 0){
-                    mDisplayValue = 1;
+                if(mDisplayValue == "0"){
+                    mDisplayValue = "1";
                     break;
                 }else{
-                    mDisplayValue = mDisplayValue * 10 + 1;
+                    mDisplayValue = mDisplayValue + "1";
                     break;
                 }
 
             case 2:
-                if(mDisplayValue == 0){
-                    mDisplayValue = 2;
+                if(mDisplayValue == "0"){
+                    mDisplayValue = "2";
                     break;
                 }else{
-                    mDisplayValue = mDisplayValue * 10 + 2;
+                    mDisplayValue = mDisplayValue + "2";
                     break;
                 }
 
             case 3:
-                if(mDisplayValue == 0){
-                    mDisplayValue = 3;
+                if(mDisplayValue == "0"){
+                    mDisplayValue = "3";
                     break;
                 }else{
-                    mDisplayValue = mDisplayValue * 10 + 3;
+                    mDisplayValue = mDisplayValue + "3";
                     break;
                 }
 
             case 4:
-                if(mDisplayValue == 0){
-                    mDisplayValue = 4;
+                if(mDisplayValue == "0"){
+                    mDisplayValue = "4";
                     break;
                 }else{
-                    mDisplayValue = mDisplayValue * 10 + 4;
+                    mDisplayValue = mDisplayValue + "4";
                     break;
                 }
 
             case 5:
-                if(mDisplayValue == 0){
-                    mDisplayValue = 5;
+                if(mDisplayValue == "0"){
+                    mDisplayValue = "5";
                     break;
                 }else{
-                    mDisplayValue = mDisplayValue * 10 + 5;
+                    mDisplayValue = mDisplayValue + "5";
                     break;
                 }
 
             case 6:
-                if(mDisplayValue == 0){
-                    mDisplayValue = 6;
+                if(mDisplayValue == "0"){
+                    mDisplayValue = "6";
                     break;
                 }else{
-                    mDisplayValue = mDisplayValue * 10 + 6;
+                    mDisplayValue = mDisplayValue + "6";
                     break;
                 }
 
             case 7:
-                if(mDisplayValue == 0){
-                    mDisplayValue = 7;
+                if(mDisplayValue == "0"){
+                    mDisplayValue = "7";
                     break;
                 }else{
-                    mDisplayValue = mDisplayValue * 10 + 7;
+                    mDisplayValue = mDisplayValue + "7";
                     break;
                 }
 
             case 8:
-                if(mDisplayValue == 0){
-                    mDisplayValue = 8;
+                if(mDisplayValue == "0"){
+                    mDisplayValue = "8";
                     break;
                 }else{
-                    mDisplayValue = mDisplayValue * 10 + 8;
+                    mDisplayValue = mDisplayValue + "8";
                     break;
                 }
 
             case 9:
-                if(mDisplayValue == 0){
-                    mDisplayValue = 9;
+                if(mDisplayValue == "0"){
+                    mDisplayValue = "9";
                     break;
                 }else{
-                    mDisplayValue = mDisplayValue * 10 + 9;
+                    mDisplayValue = mDisplayValue+ "9";
                     break;
                 }
+        }
+
+        mClearScreen = false;
+
+        return mDisplayValue;
+    }
+
+    public String clickOpetationButton(String btnName) {
+
+        switch(btnName){
+            case "ac":
+                mDisplayValue = "0";
+                mTotalResult = 0;
+                mIsInteger = true;
+//                mLastoperator = "";
+                break;
         }
 
         return mDisplayValue;
     }
 
-    public int clickOpetationButton(String btnName) {
+    public void setFractional() {
+        if(mIsInteger){
+            mIsInteger = false;
+            mDisplayValue = mDisplayValue + ".";
+        }
+    }
 
-        switch(btnName){
-            case "ac":
-                mDisplayValue = 0;
+    public String plusOperation() {
+            performMathematic("+");
+
+            String result = Double.toString(mTotalResult);
+            return result;
+    }
+
+    public String minusOperation() {
+            performMathematic("-");
+
+        String result = Double.toString(mTotalResult);
+        return result;
+    }
+
+    private void performMathematic(String operator){
+        if(mLastoperator.matches("")){
+            mTotalResult = Double.parseDouble(mDisplayValue);
+        }else{
+            switch(mLastoperator){
+                case "+":
+                    mTotalResult = mTotalResult + Double.parseDouble(mDisplayValue);
+                    break;
+                case "-":
+                    mTotalResult = mTotalResult - Double.parseDouble(mDisplayValue);
+                    break;
+            }
         }
 
-        return mDisplayValue;
+        mLastoperator = operator;
+        mDisplayValue = Double.toString(mTotalResult);
+        mIsInteger = true;
+        mClearScreen = true;
     }
 }
