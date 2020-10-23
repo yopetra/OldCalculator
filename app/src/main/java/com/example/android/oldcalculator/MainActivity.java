@@ -160,6 +160,14 @@ public class MainActivity extends AppCompatActivity {
                 binding.tvDysplay.setText(result);
             }
         });
+
+        binding.btC.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String result = presenter.clickOpetationButton("c");
+                binding.tvDysplay.setText(result);
+            }
+        });
     }
 
     private void numberActions(int nmAction){

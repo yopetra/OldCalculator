@@ -157,7 +157,12 @@ public class Presenter {
                             Double result = b / ((b / 100) * a);
                             mDisplayValue = Double.toString(result);
                         }
-                    }}
+                    }
+                }
+
+            case "c":
+                mDisplayValue = "0";
+                break;
         }
 
         return mDisplayValue;
