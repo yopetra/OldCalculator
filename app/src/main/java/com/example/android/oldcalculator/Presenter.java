@@ -131,6 +131,14 @@ public class Presenter {
                 mIsInteger = true;
                 mLastoperator = "";
                 break;
+
+            case "procent":
+                if(mLastoperator == "+"){
+                    Double a =  Double.parseDouble(mDisplayValue);
+                    Double b = mTotalResult;
+                    Double result = b + ((b / 100) * a);
+                    mDisplayValue = Double.toString(result);
+                }else{}
         }
 
         return mDisplayValue;

@@ -152,6 +152,14 @@ public class MainActivity extends AppCompatActivity {
                 binding.tvDysplay.setText(result);
             }
         });
+
+        binding.btProcent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String result = presenter.clickOpetationButton("procent");
+                binding.tvDysplay.setText(result);
+            }
+        });
     }
 
     private void numberActions(int nmAction){
