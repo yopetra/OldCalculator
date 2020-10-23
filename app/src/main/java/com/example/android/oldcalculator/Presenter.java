@@ -134,11 +134,18 @@ public class Presenter {
 
             case "procent":
                 if(mLastoperator == "+"){
+
                     Double a =  Double.parseDouble(mDisplayValue);
                     Double b = mTotalResult;
                     Double result = b + ((b / 100) * a);
                     mDisplayValue = Double.toString(result);
-                }else{}
+                }else{if(mLastoperator == "-"){
+
+                    Double a =  Double.parseDouble(mDisplayValue);
+                    Double b = mTotalResult;
+                    Double result = b - ((b / 100) * a);
+                    mDisplayValue = Double.toString(result);
+                }else{}}
         }
 
         return mDisplayValue;
