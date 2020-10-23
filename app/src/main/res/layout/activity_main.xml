@@ -44,15 +44,16 @@
                     android:padding="@dimen/buttonsPadding">
 
                     <TextView
+                        android:id="@+id/bt_mc"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="@dimen/textSizeUpperButtons"
-                        android:text="__"/>
+                        android:text="MC"/>
 
                 </FrameLayout>
 
                 <FrameLayout
-                    android:id="@+id/bt_mrc"
+                    android:id="@+id/bt_mr"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"

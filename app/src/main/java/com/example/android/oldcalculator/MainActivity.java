@@ -168,6 +168,35 @@ public class MainActivity extends AppCompatActivity {
                 binding.tvDysplay.setText(result);
             }
         });
+
+        binding.btMPlus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                presenter.clickOpetationButton("m+");
+            }
+        });
+
+        binding.btMMinus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                presenter.clickOpetationButton("m-");
+            }
+        });
+
+        binding.btMr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String result = presenter.clickOpetationButton("mr");
+                binding.tvDysplay.setText(result);
+            }
+        });
+
+        binding.btMc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                presenter.clickOpetationButton("mc");
+            }
+        });
     }
 
     private void numberActions(int nmAction){

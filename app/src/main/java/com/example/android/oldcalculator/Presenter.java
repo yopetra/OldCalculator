@@ -8,8 +8,11 @@ public class Presenter {
     private boolean mClearScreen = false;
     private String mLastoperator = "";
 //    private int mFractionalCounter = 0;
+    private Model model;
 
-    public Presenter(){}
+    public Presenter(){
+        model = new Model();
+    }
 
     public String clickedNumberButton(int btnName){
 
@@ -163,6 +166,25 @@ public class Presenter {
             case "c":
                 mDisplayValue = "0";
                 break;
+
+            case "m+":
+                Double resultPlus = model.getValue();
+                resultPlus = resultPlus + Double.parseDouble(mDisplayValue);
+                model.setValue(resultPlus);
+                break;
+
+            case "m-":
+                Double resultMinus = model.getValue();
+                resultMinus = resultMinus - Double.parseDouble(mDisplayValue);
+                model.setValue(resultMinus);
+                break;
+
+            case "mr":
+                mDisplayValue = Double.toString(model.getValue());
+                break;
+
+            case "mc":
+                model.clearValue();
         }
 
         return mDisplayValue;
