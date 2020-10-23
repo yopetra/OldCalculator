@@ -43,11 +43,16 @@
                     android:layout_weight="1"
                     android:padding="@dimen/buttonsPadding">
 
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/func_button1"/>
+
                     <TextView
                         android:id="@+id/bt_mc"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/textSizeUpperButtons"
+                        style="@style/FunctionalButtons"
                         android:text="MC"/>
 
                 </FrameLayout>
@@ -59,10 +64,15 @@
                     android:layout_weight="1"
                     android:padding="@dimen/buttonsPadding">
 
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/func_button1"/>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/textSizeUpperButtons"
+                        style="@style/FunctionalButtons"
                         android:text="MR"/>
 
                 </FrameLayout>
@@ -74,10 +84,15 @@
                     android:layout_weight="1"
                     android:padding="@dimen/buttonsPadding">
 
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/func_button1"/>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/textSizeUpperButtons"
+                        style="@style/FunctionalButtons"
                         android:text="M-"/>
 
                 </FrameLayout>
@@ -89,10 +104,15 @@
                     android:layout_weight="1"
                     android:padding="@dimen/buttonsPadding">
 
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/func_button1"/>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/textSizeUpperButtons"
+                        style="@style/FunctionalButtons"
                         android:text="M+"/>
 
                 </FrameLayout>
@@ -112,10 +132,15 @@
                     android:layout_weight="1"
                     android:padding="@dimen/buttonsPadding">
 
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/func_button2"/>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/textSizeUpperButtons"
+                        style="@style/FunctionalButtons"
                         android:text="AC"/>
 
                 </FrameLayout>
@@ -124,14 +149,18 @@
                     android:id="@+id/bt_c"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1
-"
+                    android:layout_weight="1"
                     android:padding="@dimen/buttonsPadding">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/func_button1"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/textSizeUpperButtons"
+                        style="@style/FunctionalButtons"
                         android:text="C"/>
 
                 </FrameLayout>
@@ -143,10 +172,15 @@
                     android:layout_weight="1"
                     android:padding="@dimen/buttonsPadding">
 
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/func_button1"/>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/textSizeUpperButtons"
+                        style="@style/FunctionalButtons"
                         android:text="SQR"/>
 
                 </FrameLayout>
@@ -158,10 +192,15 @@
                     android:layout_weight="1"
                     android:padding="@dimen/buttonsPadding">
 
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/func_button1"/>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/textSizeUpperButtons"
+                        style="@style/FunctionalButtons"
                         android:text="%"/>
 
                 </FrameLayout>
@@ -181,10 +220,15 @@
                     android:layout_weight="1"
                     android:padding="@dimen/buttonsPadding">
 
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/black_button1"/>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/textSizeUpperButtons"
+                        style="@style/NumbersButtons"
                         android:text="7"/>
 
                 </FrameLayout>
@@ -196,10 +240,15 @@
                     android:layout_weight="1"
                     android:padding="@dimen/buttonsPadding">
 
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/black_button1"/>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/textSizeUpperButtons"
+                        style="@style/NumbersButtons"
                         android:text="8"/>
 
                 </FrameLayout>
@@ -211,10 +260,15 @@
                     android:layout_weight="1"
                     android:padding="@dimen/buttonsPadding">
 
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/black_button1"/>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/textSizeUpperButtons"
+                        style="@style/NumbersButtons"
                         android:text="9"/>
 
                 </FrameLayout>
@@ -226,10 +280,15 @@
                     android:layout_weight="1"
                     android:padding="@dimen/buttonsPadding">
 
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/black_button2"/>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/textSizeUpperButtons"
+                        style="@style/NumbersButtons"
                         android:text="/"/>
 
                 </FrameLayout>
@@ -249,10 +308,15 @@
                     android:layout_weight="1"
                     android:padding="@dimen/buttonsPadding">
 
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/black_button1"/>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/textSizeUpperButtons"
+                        style="@style/NumbersButtons"
                         android:text="4"/>
 
                 </FrameLayout>
@@ -264,10 +328,15 @@
                     android:layout_weight="1"
                     android:padding="@dimen/buttonsPadding">
 
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/black_button1"/>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/textSizeUpperButtons"
+                        style="@style/NumbersButtons"
                         android:text="5"/>
 
                 </FrameLayout>
@@ -279,10 +348,15 @@
                     android:layout_weight="1"
                     android:padding="@dimen/buttonsPadding">
 
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/black_button1"/>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/textSizeUpperButtons"
+                        style="@style/NumbersButtons"
                         android:text="6"/>
 
                 </FrameLayout>
@@ -294,10 +368,15 @@
                     android:layout_weight="1"
                     android:padding="@dimen/buttonsPadding">
 
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/black_button2"/>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/textSizeUpperButtons"
+                        style="@style/NumbersButtons"
                         android:text="*"/>
 
                 </FrameLayout>
@@ -317,10 +396,15 @@
                     android:layout_weight="1"
                     android:padding="@dimen/buttonsPadding">
 
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/black_button1"/>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/textSizeUpperButtons"
+                        style="@style/NumbersButtons"
                         android:text="1"/>
 
                 </FrameLayout>
@@ -332,10 +416,15 @@
                     android:layout_weight="1"
                     android:padding="@dimen/buttonsPadding">
 
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/black_button1"/>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/textSizeUpperButtons"
+                        style="@style/NumbersButtons"
                         android:text="2"/>
 
                 </FrameLayout>
@@ -347,10 +436,15 @@
                     android:layout_weight="1"
                     android:padding="@dimen/buttonsPadding">
 
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/black_button1"/>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/textSizeUpperButtons"
+                        style="@style/NumbersButtons"
                         android:text="3"/>
 
                 </FrameLayout>
@@ -362,10 +456,15 @@
                     android:layout_weight="1"
                     android:padding="@dimen/buttonsPadding">
 
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/black_button2"/>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/textSizeUpperButtons"
+                        style="@style/NumbersButtons"
                         android:text="-"/>
 
                 </FrameLayout>
@@ -386,10 +485,15 @@
                     android:layout_weight="1"
                     android:padding="@dimen/buttonsPadding">
 
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/black_button1"/>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/textSizeUpperButtons"
+                        style="@style/NumbersButtons"
                         android:text="0"/>
 
                 </FrameLayout>
@@ -401,10 +505,15 @@
                     android:layout_weight="1"
                     android:padding="@dimen/buttonsPadding">
 
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/black_button1"/>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/textSizeUpperButtons"
+                        style="@style/NumbersButtons"
                         android:text="."/>
 
                 </FrameLayout>
@@ -416,10 +525,15 @@
                     android:layout_weight="1"
                     android:padding="@dimen/buttonsPadding">
 
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/black_button2"/>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/textSizeUpperButtons"
+                        style="@style/NumbersButtons"
                         android:text="="/>
 
                 </FrameLayout>
@@ -431,10 +545,15 @@
                     android:layout_weight="1"
                     android:padding="@dimen/buttonsPadding">
 
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/black_button2"/>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/textSizeUpperButtons"
+                        style="@style/NumbersButtons"
                         android:text="+"/>
 
                 </FrameLayout>

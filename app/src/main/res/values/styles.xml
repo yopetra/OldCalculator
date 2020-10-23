@@ -7,4 +7,16 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="NumbersButtons" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="android:textSize">@dimen/textSizeUpperButtons</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+    <style name="FunctionalButtons" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="android:textSize">30sp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textColor">@color/colorBlack</item>
+    </style>
+
 </resources>
