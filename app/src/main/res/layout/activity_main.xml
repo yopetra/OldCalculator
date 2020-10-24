@@ -26,13 +26,62 @@
                 android:layout_height="0dp"
                 android:layout_weight="1.4">
 
-                <TextView
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/dn"
+                        android:layout_weight="1"/>
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/dn"
+                        android:layout_weight="1"/>
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/dn"
+                        android:layout_weight="1"/>
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/dn"
+                        android:layout_weight="1"/>
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/d5"
+                        android:layout_weight="1"/>
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/d5"
+                        android:layout_weight="1"/>
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/d5"
+                        android:layout_weight="1"/>
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/d5"
+                        android:layout_weight="1"/>
+
+                </LinearLayout>
+
+                <!--TextView
                     android:id="@+id/tv_dysplay"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="right"
                     android:text="0"
-                    android:textSize="84sp"/>
+                    android:textSize="84sp"/-->
             </FrameLayout>
 
             <LinearLayout
