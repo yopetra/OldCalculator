@@ -230,6 +230,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void showResult(String result){
+        int decimalIndex = 0;
         char[] ch = new char[result.length()];
 
         int chId = 0;
@@ -237,6 +238,8 @@ public class MainActivity extends AppCompatActivity {
             if(result.charAt(i) != '.'){
                 ch[chId] = result.charAt(i);
                 chId++;
+            }else{
+                //TODO Add decimal visibility on display
             }
         }
 
