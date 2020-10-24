@@ -234,8 +234,10 @@ public class MainActivity extends AppCompatActivity {
 
         int chId = 0;
         for(int i = result.length()-1; i > -1; i--){
-            ch[chId] = result.charAt(i);
-            chId++;
+            if(result.charAt(i) != '.'){
+                ch[chId] = result.charAt(i);
+                chId++;
+            }
         }
 
         int displaySize = 7; // 7 digits
@@ -294,6 +296,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
             digitsViews.get(i).setImageDrawable(mDrawable);
+
         }
     }
 }
