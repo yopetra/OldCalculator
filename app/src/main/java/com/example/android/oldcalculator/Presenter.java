@@ -227,6 +227,7 @@ public class Presenter {
 
     public String equalOperation() {
         performMathematic(mLastoperator);
+        mLastoperator = "1";
 
         String result = Double.toString(mTotalResult);
         return result;

@@ -3,15 +3,20 @@ package com.example.android.oldcalculator;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 
 import com.example.android.oldcalculator.databinding.ActivityMainBinding;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
     Presenter presenter = new Presenter();
     ActivityMainBinding binding;
+    ArrayList<ImageView> digitsViews = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +25,16 @@ public class MainActivity extends AppCompatActivity {
 
          binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
 
-         binding.bt0.setOnClickListener(new View.OnClickListener() {
+        digitsViews.add(binding.ivD0);
+        digitsViews.add(binding.ivD1);
+        digitsViews.add(binding.ivD2);
+        digitsViews.add(binding.ivD3);
+        digitsViews.add(binding.ivD4);
+        digitsViews.add(binding.ivD5);
+        digitsViews.add(binding.ivD6);
+        digitsViews.add(binding.ivD7);
+
+        binding.bt0.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View view) {
                  numberActions(0);
@@ -94,7 +108,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String  result =  presenter.clickOpetationButton("ac");
-                binding.tvDysplay.setText(result);
+//                binding.tvDysplay.setText(result);
+                showResult(result);
             }
         });
 
@@ -109,7 +124,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String result = presenter.plusOperation();
-                binding.tvDysplay.setText(result);
+//                binding.tvDysplay.setText(result);
+                showResult(result);
             }
         });
 
@@ -117,7 +133,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String result = presenter.minusOperation();
-                binding.tvDysplay.setText(result);
+//                binding.tvDysplay.setText(result);
+                showResult(result);
             }
         });
 
@@ -125,7 +142,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String result = presenter.multiplyOperation();
-                binding.tvDysplay.setText(result);
+//                binding.tvDysplay.setText(result);
+                showResult(result);
             }
         });
 
@@ -133,7 +151,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String result = presenter.divideOperation();
-                binding.tvDysplay.setText(result);
+//                binding.tvDysplay.setText(result);
+                showResult(result);
             }
         });
 
@@ -141,7 +160,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String result = presenter.equalOperation();
-                binding.tvDysplay.setText(result);
+//                binding.tvDysplay.setText(result);
+                showResult(result);
             }
         });
 
@@ -149,7 +169,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String result = presenter.clickOpetationButton("sqr");
-                binding.tvDysplay.setText(result);
+//                binding.tvDysplay.setText(result);
+                showResult(result);
             }
         });
 
@@ -157,7 +178,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String result = presenter.clickOpetationButton("procent");
-                binding.tvDysplay.setText(result);
+//                binding.tvDysplay.setText(result);
+                showResult(result);
             }
         });
 
@@ -165,7 +187,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String result = presenter.clickOpetationButton("c");
-                binding.tvDysplay.setText(result);
+//                binding.tvDysplay.setText(result);
+                showResult(result);
             }
         });
 
@@ -187,7 +210,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String result = presenter.clickOpetationButton("mr");
-                binding.tvDysplay.setText(result);
+//                binding.tvDysplay.setText(result);
+                showResult(result);
             }
         });
 
@@ -201,6 +225,75 @@ public class MainActivity extends AppCompatActivity {
 
     private void numberActions(int nmAction){
         String result =  presenter.clickedNumberButton(nmAction);
-        binding.tvDysplay.setText(result);
+//        binding.tvDysplay.setText(result);
+        showResult(result);
+    }
+
+    private void showResult(String result){
+        char[] ch = new char[result.length()];
+
+        int chId = 0;
+        for(int i = result.length()-1; i > -1; i--){
+            ch[chId] = result.charAt(i);
+            chId++;
+        }
+
+        int displaySize = 7; // 7 digits
+        for(int i = displaySize; i > -1; i--){
+
+            char currentDigit = 'n';
+            if(i < ch.length){
+                currentDigit = ch[i];
+            }
+
+            Drawable mDrawable = getResources().getDrawable(R.drawable.dn);
+
+            switch(currentDigit){
+                case '0':
+                    mDrawable = getResources().getDrawable(R.drawable.d0);
+                    break;
+
+                case '1':
+                    mDrawable = getResources().getDrawable(R.drawable.d1);
+                    break;
+
+                case '2':
+                    mDrawable = getResources().getDrawable(R.drawable.d2);
+                    break;
+
+                case '3':
+                    mDrawable = getResources().getDrawable(R.drawable.d3);
+                    break;
+
+                case '4':
+                    mDrawable = getResources().getDrawable(R.drawable.d4);
+                    break;
+
+                case '5':
+                    mDrawable = getResources().getDrawable(R.drawable.d5);
+                    break;
+
+                case '6':
+                    mDrawable = getResources().getDrawable(R.drawable.d6);
+                    break;
+
+                case '7':
+                    mDrawable = getResources().getDrawable(R.drawable.d7);
+                    break;
+
+                case '8':
+                    mDrawable = getResources().getDrawable(R.drawable.d8);
+                    break;
+
+                case '9':
+                    mDrawable = getResources().getDrawable(R.drawable.d9);
+                    break;
+
+                default:
+                    mDrawable = getResources().getDrawable(R.drawable.dn);
+            }
+
+            digitsViews.get(i).setImageDrawable(mDrawable);
+        }
     }
 }
