@@ -19,7 +19,8 @@ public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
     ArrayList<ImageView> digitsViews = new ArrayList<>();
     ArrayList<ImageView> decimalViews = new ArrayList<>();
-    int displaySize = 7; // 7 digits
+    int displaySize = 8; // 8 digits
+    private static boolean isError = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -121,6 +122,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String  result =  presenter.clickOpetationButton("ac");
                 showResult(result);
+                binding.ivDec0.setVisibility(View.VISIBLE);
             }
         });
 
@@ -192,6 +194,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String result = presenter.clickOpetationButton("c");
                 showResult(result);
+                binding.ivDec0.setVisibility(View.VISIBLE);
             }
         });
 
@@ -228,6 +231,14 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    public static void setErrorLamp(boolean state){
+        if(state){
+            isError = true;
+        }else{
+            isError = false;
+        }
+    }
+
     private void numberActions(int nmAction){
         String result =  presenter.clickedNumberButton(nmAction);
         showResult(result);
@@ -240,6 +251,13 @@ public class MainActivity extends AppCompatActivity {
         }else{
             binding.ivMinusLamp.setVisibility(View.INVISIBLE);
         }
+
+        if(isError){
+            binding.ivErrorLamp.setVisibility(View.VISIBLE);
+        }else{
+            binding.ivErrorLamp.setVisibility(View.INVISIBLE);
+        }
+
         clearAllDecimals();
         char[] ch = new char[result.length()];
 
@@ -254,7 +272,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
-        for(int i = displaySize; i > -1; i--){
+        for(int i = displaySize-1; i > -1; i--){
 
             char currentDigit = 'n';
             if(i < ch.length){

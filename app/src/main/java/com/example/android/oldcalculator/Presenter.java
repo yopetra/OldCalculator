@@ -10,6 +10,7 @@ public class Presenter {
     private boolean mClearScreen = false;
     private String mLastoperator = "";
     private Model model;
+    private int mDisplaySize = 8;
 
     public Presenter(){
         model = new Model();
@@ -21,95 +22,100 @@ public class Presenter {
             mDisplayValue = "0";
         }
 
-        switch(btnName){
-            case 0:
-                if(mDisplayValue == "0"){
-                    break;
-                }else{
-                    mDisplayValue = mDisplayValue + "0";
-                    break;
-                }
+        int stringSize = mDisplayValue.length();
+        if(mDisplayValue.contains(".")){stringSize--;}
 
-            case 1:
-                if(mDisplayValue == "0"){
-                    mDisplayValue = "1";
-                    break;
-                }else{
-                    mDisplayValue = mDisplayValue + "1";
-                    break;
-                }
+        if(stringSize < mDisplaySize){
+            switch(btnName){
+                case 0:
+                    if(mDisplayValue == "0"){
+                        break;
+                    }else{
+                        mDisplayValue = mDisplayValue + "0";
+                        break;
+                    }
 
-            case 2:
-                if(mDisplayValue == "0"){
-                    mDisplayValue = "2";
-                    break;
-                }else{
-                    mDisplayValue = mDisplayValue + "2";
-                    break;
-                }
+                case 1:
+                    if(mDisplayValue == "0"){
+                        mDisplayValue = "1";
+                        break;
+                    }else{
+                        mDisplayValue = mDisplayValue + "1";
+                        break;
+                    }
 
-            case 3:
-                if(mDisplayValue == "0"){
-                    mDisplayValue = "3";
-                    break;
-                }else{
-                    mDisplayValue = mDisplayValue + "3";
-                    break;
-                }
+                case 2:
+                    if(mDisplayValue == "0"){
+                        mDisplayValue = "2";
+                        break;
+                    }else{
+                        mDisplayValue = mDisplayValue + "2";
+                        break;
+                    }
 
-            case 4:
-                if(mDisplayValue == "0"){
-                    mDisplayValue = "4";
-                    break;
-                }else{
-                    mDisplayValue = mDisplayValue + "4";
-                    break;
-                }
+                case 3:
+                    if(mDisplayValue == "0"){
+                        mDisplayValue = "3";
+                        break;
+                    }else{
+                        mDisplayValue = mDisplayValue + "3";
+                        break;
+                    }
 
-            case 5:
-                if(mDisplayValue == "0"){
-                    mDisplayValue = "5";
-                    break;
-                }else{
-                    mDisplayValue = mDisplayValue + "5";
-                    break;
-                }
+                case 4:
+                    if(mDisplayValue == "0"){
+                        mDisplayValue = "4";
+                        break;
+                    }else{
+                        mDisplayValue = mDisplayValue + "4";
+                        break;
+                    }
 
-            case 6:
-                if(mDisplayValue == "0"){
-                    mDisplayValue = "6";
-                    break;
-                }else{
-                    mDisplayValue = mDisplayValue + "6";
-                    break;
-                }
+                case 5:
+                    if(mDisplayValue == "0"){
+                        mDisplayValue = "5";
+                        break;
+                    }else{
+                        mDisplayValue = mDisplayValue + "5";
+                        break;
+                    }
 
-            case 7:
-                if(mDisplayValue == "0"){
-                    mDisplayValue = "7";
-                    break;
-                }else{
-                    mDisplayValue = mDisplayValue + "7";
-                    break;
-                }
+                case 6:
+                    if(mDisplayValue == "0"){
+                        mDisplayValue = "6";
+                        break;
+                    }else{
+                        mDisplayValue = mDisplayValue + "6";
+                        break;
+                    }
 
-            case 8:
-                if(mDisplayValue == "0"){
-                    mDisplayValue = "8";
-                    break;
-                }else{
-                    mDisplayValue = mDisplayValue + "8";
-                    break;
-                }
+                case 7:
+                    if(mDisplayValue == "0"){
+                        mDisplayValue = "7";
+                        break;
+                    }else{
+                        mDisplayValue = mDisplayValue + "7";
+                        break;
+                    }
 
-            case 9:
-                if(mDisplayValue == "0"){
-                    mDisplayValue = "9";
-                    break;
-                }else{
-                    mDisplayValue = mDisplayValue+ "9";
-                    break;
-                }
+                case 8:
+                    if(mDisplayValue == "0"){
+                        mDisplayValue = "8";
+                        break;
+                    }else{
+                        mDisplayValue = mDisplayValue + "8";
+                        break;
+                    }
+
+                case 9:
+                    if(mDisplayValue == "0"){
+                        mDisplayValue = "9";
+                        break;
+                    }else{
+                        mDisplayValue = mDisplayValue+ "9";
+                        break;
+                    }
+            }
         }
 
         mClearScreen = false;
@@ -125,12 +131,17 @@ public class Presenter {
                 mTotalResult = 0;
                 mIsInteger = true;
                 mLastoperator = "";
+                MainActivity.setErrorLamp(false);
                 break;
 
             case "sqr":
                 mTotalResult = Math.sqrt(Double.parseDouble(mDisplayValue));
 
                 mDisplayValue = Double.toString(mTotalResult);
+                if(mDisplayValue.length() > 8){
+                    mDisplayValue = mDisplayValue.substring(0, 8);
+                    MainActivity.setErrorLamp(true);
+                }
                 mTotalResult = 0;
                 mIsInteger = true;
                 mLastoperator = "";
@@ -164,8 +175,15 @@ public class Presenter {
                     }
                 }
 
+                if(mDisplayValue.length() > 8){
+                    mDisplayValue = mDisplayValue.substring(0, 8);
+                    MainActivity.setErrorLamp(true);
+                }
+                break;
+
             case "c":
                 mDisplayValue = "0";
+                MainActivity.setErrorLamp(false);
                 break;
 
             case "m+":
@@ -204,6 +222,10 @@ public class Presenter {
             performMathematic("+");
 
             String result = Double.toString(mTotalResult);
+            if(result.length() > 8){
+                result = result.substring(0, 8);
+                MainActivity.setErrorLamp(true);
+            }
             result = removeZero(result);
             return result;
     }
@@ -212,6 +234,10 @@ public class Presenter {
             performMathematic("-");
 
         String result = Double.toString(mTotalResult);
+        if(result.length() > 8){
+            result = result.substring(0, 8);
+            MainActivity.setErrorLamp(true);
+        }
         result = removeZero(result);
         return result;
     }
@@ -220,6 +246,10 @@ public class Presenter {
         performMathematic("*");
 
         String result = Double.toString(mTotalResult);
+        if(result.length() > 8){
+            result = result.substring(0, 8);
+            MainActivity.setErrorLamp(true);
+        }
         result = removeZero(result);
         return result;
     }
@@ -228,6 +258,10 @@ public class Presenter {
         performMathematic("/");
 
         String result = Double.toString(mTotalResult);
+        if(result.length() > 8){
+            result = result.substring(0, 8);
+            MainActivity.setErrorLamp(true);
+        }
         result = removeZero(result);
         return result;
     }
@@ -237,6 +271,10 @@ public class Presenter {
         mLastoperator = "";
 
         String result = Double.toString(mTotalResult);
+        if(result.length() > 8 || result.matches("Nan") || result.matches("Infinity")){
+            result = result.substring(0, 8);
+            MainActivity.setErrorLamp(true);
+        }
         result = removeZero(result);
         return result;
     }
