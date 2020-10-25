@@ -46,11 +46,13 @@
                         android:textColor="@color/colorWhiteGrey"/>
 
                     <ImageView
+                        android:id="@+id/iv_minus_lamp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingLeft="5dp"
                         android:paddingRight="20dp"
                         android:paddingTop="5dp"
+                        android:visibility="invisible"
                         android:src="@drawable/amber"/>
 
                     <TextView
@@ -60,11 +62,13 @@
                         android:textColor="@color/colorWhiteGrey"/>
 
                     <ImageView
+                        android:id="@+id/iv_memory_lamp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingLeft="5dp"
                         android:paddingRight="20dp"
                         android:paddingTop="5dp"
+                        android:visibility="invisible"
                         android:src="@drawable/amber"/>
 
                     <TextView
@@ -74,11 +78,13 @@
                         android:textColor="@color/colorWhiteGrey"/>
 
                     <ImageView
+                        android:id="@+id/iv_error_lamp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingLeft="5dp"
                         android:paddingRight="20dp"
                         android:paddingTop="5dp"
+                        android:visibility="invisible"
                         android:src="@drawable/amber"/>
 
                 </LinearLayout>

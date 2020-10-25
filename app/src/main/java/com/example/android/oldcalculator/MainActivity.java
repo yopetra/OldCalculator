@@ -120,7 +120,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String  result =  presenter.clickOpetationButton("ac");
-//                binding.tvDysplay.setText(result);
                 showResult(result);
             }
         });
@@ -136,7 +135,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String result = presenter.plusOperation();
-//                binding.tvDysplay.setText(result);
                 showResult(result);
             }
         });
@@ -145,7 +143,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String result = presenter.minusOperation();
-//                binding.tvDysplay.setText(result);
                 showResult(result);
             }
         });
@@ -154,7 +151,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String result = presenter.multiplyOperation();
-//                binding.tvDysplay.setText(result);
                 showResult(result);
             }
         });
@@ -163,7 +159,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String result = presenter.divideOperation();
-//                binding.tvDysplay.setText(result);
                 showResult(result);
             }
         });
@@ -172,7 +167,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String result = presenter.equalOperation();
-//                binding.tvDysplay.setText(result);
                 showResult(result);
             }
         });
@@ -181,7 +175,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String result = presenter.clickOpetationButton("sqr");
-//                binding.tvDysplay.setText(result);
                 showResult(result);
             }
         });
@@ -190,7 +183,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String result = presenter.clickOpetationButton("procent");
-//                binding.tvDysplay.setText(result);
                 showResult(result);
             }
         });
@@ -199,7 +191,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String result = presenter.clickOpetationButton("c");
-//                binding.tvDysplay.setText(result);
                 showResult(result);
             }
         });
@@ -208,6 +199,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 presenter.clickOpetationButton("m+");
+                binding.ivMemoryLamp.setVisibility(View.VISIBLE);
             }
         });
 
@@ -215,6 +207,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 presenter.clickOpetationButton("m-");
+                binding.ivMemoryLamp.setVisibility(View.VISIBLE);
             }
         });
 
@@ -222,7 +215,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String result = presenter.clickOpetationButton("mr");
-//                binding.tvDysplay.setText(result);
                 showResult(result);
             }
         });
@@ -231,17 +223,23 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 presenter.clickOpetationButton("mc");
+                binding.ivMemoryLamp.setVisibility(View.INVISIBLE);
             }
         });
     }
 
     private void numberActions(int nmAction){
         String result =  presenter.clickedNumberButton(nmAction);
-//        binding.tvDysplay.setText(result);
         showResult(result);
     }
 
     private void showResult(String result){
+        double dbResult = Double.parseDouble(result);
+        if(dbResult < 0){
+            binding.ivMinusLamp.setVisibility(View.VISIBLE);
+        }else{
+            binding.ivMinusLamp.setVisibility(View.INVISIBLE);
+        }
         clearAllDecimals();
         char[] ch = new char[result.length()];
 
@@ -251,7 +249,6 @@ public class MainActivity extends AppCompatActivity {
                 ch[chId] = result.charAt(i);
                 chId++;
             }else{
-                //TODO Add decimal visibility on display
                 decimalViews.get(chId).setVisibility(View.VISIBLE);
             }
         }
