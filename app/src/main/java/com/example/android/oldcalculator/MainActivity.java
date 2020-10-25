@@ -5,6 +5,7 @@ import androidx.databinding.DataBindingUtil;
 
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -17,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
     Presenter presenter = new Presenter();
     ActivityMainBinding binding;
     ArrayList<ImageView> digitsViews = new ArrayList<>();
+    ArrayList<ImageView> decimalViews = new ArrayList<>();
+    int displaySize = 7; // 7 digits
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +36,15 @@ public class MainActivity extends AppCompatActivity {
         digitsViews.add(binding.ivD5);
         digitsViews.add(binding.ivD6);
         digitsViews.add(binding.ivD7);
+
+        decimalViews.add(binding.ivDec0);
+        decimalViews.add(binding.ivDec1);
+        decimalViews.add(binding.ivDec2);
+        decimalViews.add(binding.ivDec3);
+        decimalViews.add(binding.ivDec4);
+        decimalViews.add(binding.ivDec5);
+        decimalViews.add(binding.ivDec6);
+        decimalViews.add(binding.ivDec7);
 
         binding.bt0.setOnClickListener(new View.OnClickListener() {
              @Override
@@ -230,7 +242,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void showResult(String result){
-        int decimalIndex = 0;
+        clearAllDecimals();
         char[] ch = new char[result.length()];
 
         int chId = 0;
@@ -240,10 +252,11 @@ public class MainActivity extends AppCompatActivity {
                 chId++;
             }else{
                 //TODO Add decimal visibility on display
+                decimalViews.get(i).setVisibility(View.VISIBLE);
             }
         }
 
-        int displaySize = 7; // 7 digits
+
         for(int i = displaySize; i > -1; i--){
 
             char currentDigit = 'n';
@@ -300,6 +313,12 @@ public class MainActivity extends AppCompatActivity {
 
             digitsViews.get(i).setImageDrawable(mDrawable);
 
+        }
+    }
+
+    private void clearAllDecimals() {
+        for(int i = 0; i < displaySize; i++){
+            decimalViews.get(i).setVisibility(View.INVISIBLE);
         }
     }
 }

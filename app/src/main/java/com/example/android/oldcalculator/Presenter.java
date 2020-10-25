@@ -1,5 +1,7 @@
 package com.example.android.oldcalculator;
 
+import android.app.VoiceInteractor;
+
 public class Presenter {
 
     private String mDisplayValue = "0";
@@ -7,7 +9,6 @@ public class Presenter {
     private boolean mIsInteger = true;
     private boolean mClearScreen = false;
     private String mLastoperator = "";
-//    private int mFractionalCounter = 0;
     private Model model;
 
     public Presenter(){
@@ -187,6 +188,8 @@ public class Presenter {
                 model.clearValue();
         }
 
+        removeZero();
+
         return mDisplayValue;
     }
 
@@ -201,6 +204,7 @@ public class Presenter {
             performMathematic("+");
 
             String result = Double.toString(mTotalResult);
+            result = removeZero(result);
             return result;
     }
 
@@ -208,6 +212,7 @@ public class Presenter {
             performMathematic("-");
 
         String result = Double.toString(mTotalResult);
+        result = removeZero(result);
         return result;
     }
 
@@ -215,6 +220,7 @@ public class Presenter {
         performMathematic("*");
 
         String result = Double.toString(mTotalResult);
+        result = removeZero(result);
         return result;
     }
 
@@ -222,14 +228,16 @@ public class Presenter {
         performMathematic("/");
 
         String result = Double.toString(mTotalResult);
+        result = removeZero(result);
         return result;
     }
 
     public String equalOperation() {
         performMathematic(mLastoperator);
-        mLastoperator = "1";
+        mLastoperator = "";
 
         String result = Double.toString(mTotalResult);
+        result = removeZero(result);
         return result;
     }
 
@@ -255,8 +263,38 @@ public class Presenter {
 
         mLastoperator = operator;
         mDisplayValue = Double.toString(mTotalResult);
+//        removeZero();
         mIsInteger = true;
         mClearScreen = true;
     }
 
+    private void removeZero() {
+        int sizeOfValueOnDisplay = mDisplayValue.length();
+        if(sizeOfValueOnDisplay > 2){
+            String firstCharFromRight =  mDisplayValue.substring(sizeOfValueOnDisplay-1, sizeOfValueOnDisplay);
+            String secondCharFromRight =  mDisplayValue.substring(sizeOfValueOnDisplay-2, sizeOfValueOnDisplay-1);
+
+            if(firstCharFromRight.matches("0")){
+                if(secondCharFromRight.matches(".")){
+                    mDisplayValue = mDisplayValue.substring(0, sizeOfValueOnDisplay-1);
+                }
+            }
+        }
+    }
+
+    private String removeZero(String value) {
+        int sizeOfValueOnDisplay = value.length();
+        if(sizeOfValueOnDisplay > 2){
+            String firstCharFromRight =  value.substring(sizeOfValueOnDisplay-1, sizeOfValueOnDisplay);
+            String secondCharFromRight =  value.substring(sizeOfValueOnDisplay-2, sizeOfValueOnDisplay-1);
+
+            if(firstCharFromRight.matches("0")){
+                if(secondCharFromRight.matches(".")){
+                    value = value.substring(0, sizeOfValueOnDisplay-1);
+                }
+            }
+        }
+
+        return value;
+    }
 }

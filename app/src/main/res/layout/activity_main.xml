@@ -43,6 +43,7 @@
                             android:src="@drawable/dn" />
 
                         <ImageView
+                            android:id="@+id/iv_dec7"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="right|bottom"
@@ -64,6 +65,7 @@
                             android:src="@drawable/dn"/>
 
                         <ImageView
+                            android:id="@+id/iv_dec6"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="right|bottom"
@@ -86,6 +88,7 @@
                             android:src="@drawable/dn"/>
 
                         <ImageView
+                            android:id="@+id/iv_dec5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="right|bottom"
@@ -108,6 +111,7 @@
                             android:src="@drawable/dn"/>
 
                         <ImageView
+                            android:id="@+id/iv_dec4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="right|bottom"
@@ -129,6 +133,7 @@
                             android:src="@drawable/dn"/>
 
                         <ImageView
+                            android:id="@+id/iv_dec3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="right|bottom"
@@ -150,6 +155,7 @@
                             android:src="@drawable/dn"/>
 
                         <ImageView
+                            android:id="@+id/iv_dec2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="right|bottom"
@@ -171,6 +177,7 @@
                             android:src="@drawable/dn"/>
 
                         <ImageView
+                            android:id="@+id/iv_dec1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="right|bottom"
@@ -192,6 +199,7 @@
                             android:src="@drawable/dn"/>
 
                         <ImageView
+                            android:id="@+id/iv_dec0"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="right|bottom"
@@ -203,13 +211,6 @@
 
                 </LinearLayout>
 
-                <!--TextView
-                    android:id="@+id/tv_dysplay"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="right"
-                    android:text="0"
-                    android:textSize="84sp"/-->
             </FrameLayout>
 
             <LinearLayout
