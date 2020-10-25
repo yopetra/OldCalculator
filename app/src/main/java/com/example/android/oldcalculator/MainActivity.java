@@ -252,7 +252,7 @@ public class MainActivity extends AppCompatActivity {
                 chId++;
             }else{
                 //TODO Add decimal visibility on display
-                decimalViews.get(i).setVisibility(View.VISIBLE);
+                decimalViews.get(chId).setVisibility(View.VISIBLE);
             }
         }
 
@@ -263,6 +263,7 @@ public class MainActivity extends AppCompatActivity {
             if(i < ch.length){
                 currentDigit = ch[i];
             }
+
 
             Drawable mDrawable = getResources().getDrawable(R.drawable.dn);
 
