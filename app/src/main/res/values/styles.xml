@@ -7,6 +7,10 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="AppTheme.Launcher" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_screen</item>
+    </style>
+
     <style name="NumbersButtons" parent="Theme.AppCompat.DayNight.DarkActionBar">
         <item name="android:textSize">@dimen/textSizeUpperButtons</item>
         <item name="android:layout_gravity">center</item>

@@ -1,4 +1,4 @@
-package com.example.android.oldcalculator;
+package com.clouds.android.oldcalculator;
 
 import org.junit.Test;
 

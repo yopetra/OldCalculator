@@ -1,15 +1,14 @@
-package com.example.android.oldcalculator;
+package com.clouds.android.oldcalculator;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.example.android.oldcalculator.databinding.ActivityMainBinding;
+import com.clouds.android.oldcalculator.databinding.ActivityMainBinding;
 
 import java.util.ArrayList;
 
@@ -24,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTheme(R.style.AppTheme);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 

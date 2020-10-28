@@ -1,4 +1,4 @@
-package com.example.android.oldcalculator;
+package com.clouds.android.oldcalculator;
 
 public class Model {
 
