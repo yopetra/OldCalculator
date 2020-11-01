@@ -4,7 +4,7 @@ public class Presenter {
 
     private String mDisplayValue = "0";
     private double mTotalResult = 0;
-    private boolean mIsInteger = true;
+    private static boolean mIsInteger = true;
     private boolean mClearScreen = false;
     private String mLastoperator = "";
     private Model model;
@@ -275,6 +275,10 @@ public class Presenter {
         }
         result = removeZero(result);
         return result;
+    }
+
+    public static boolean isInteger(){
+        return mIsInteger;
     }
 
     private void performMathematic(String operator){

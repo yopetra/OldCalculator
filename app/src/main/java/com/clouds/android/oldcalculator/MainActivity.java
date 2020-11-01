@@ -243,6 +243,11 @@ public class MainActivity extends AppCompatActivity {
     private void numberActions(int nmAction){
         String result =  presenter.clickedNumberButton(nmAction);
         showResult(result);
+        if(Presenter.isInteger()){
+            binding.ivDec0.setVisibility(View.VISIBLE);
+        }else{
+            binding.ivDec0.setVisibility(View.INVISIBLE);
+        }
     }
 
     private void showResult(String result){
